@@ -1,5 +1,5 @@
 //
-//  UDTrackballAppDelegate.h
+//  ViewController.h
 //  UDTrackball
 //
 //  Created by Uwe Dauernheim on 2/14/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UDTrackballAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ViewController : UIViewController
 
 @end

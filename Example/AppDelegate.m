@@ -1,14 +1,14 @@
 //
-//  UDTrackballAppDelegate.m
+//  AppDelegate.m
 //  UDTrackball
 //
 //  Created by Uwe Dauernheim on 2/14/13.
 //  Copyright (c) 2013 Uwe Dauernheim. All rights reserved.
 //
 
-#import "UDTrackballAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation UDTrackballAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

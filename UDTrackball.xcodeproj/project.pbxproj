@@ -12,17 +12,25 @@
 		C6B3404016CD0315006D6295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3403F16CD0315006D6295 /* CoreGraphics.framework */; };
 		C6B3404616CD0315006D6295 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B3404416CD0315006D6295 /* InfoPlist.strings */; };
 		C6B3404816CD0315006D6295 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3404716CD0315006D6295 /* main.m */; };
-		C6B3404C16CD0315006D6295 /* UDTrackballAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3404B16CD0315006D6295 /* UDTrackballAppDelegate.m */; };
+		C6B3404C16CD0315006D6295 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3404B16CD0315006D6295 /* AppDelegate.m */; };
 		C6B3404E16CD0316006D6295 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3404D16CD0316006D6295 /* Default.png */; };
 		C6B3405016CD0316006D6295 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3404F16CD0316006D6295 /* Default@2x.png */; };
 		C6B3405216CD0316006D6295 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3405116CD0316006D6295 /* Default-568h@2x.png */; };
 		C6B3405516CD0316006D6295 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B3405316CD0316006D6295 /* MainStoryboard.storyboard */; };
-		C6B3405816CD0316006D6295 /* UDTrackballViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3405716CD0316006D6295 /* UDTrackballViewController.m */; };
+		C6B3405816CD0316006D6295 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3405716CD0316006D6295 /* ViewController.m */; };
 		C6B3406016CD0316006D6295 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3405F16CD0316006D6295 /* SenTestingKit.framework */; };
 		C6B3406116CD0316006D6295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3403B16CD0315006D6295 /* UIKit.framework */; };
 		C6B3406216CD0316006D6295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B3403D16CD0315006D6295 /* Foundation.framework */; };
-		C6B3406A16CD0316006D6295 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6B3406816CD0316006D6295 /* InfoPlist.strings */; };
-		C6B3406D16CD0316006D6295 /* UDTrackballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3406C16CD0316006D6295 /* UDTrackballTests.m */; };
+		C6B3407816CD63CF006D6295 /* UDInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3407716CD63CF006D6295 /* UDInputAccessoryView.m */; };
+		C6B3407B16CD7FE0006D6295 /* trackball.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3407916CD7FE0006D6295 /* trackball.png */; };
+		C6B3407C16CD7FE0006D6295 /* trackball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3407A16CD7FE0006D6295 /* trackball@2x.png */; };
+		C6B3407F16CD8133006D6295 /* UDBarTrackballItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B3407E16CD8133006D6295 /* UDBarTrackballItem.m */; };
+		C6B3408216CE3580006D6295 /* trackball highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3408016CE3580006D6295 /* trackball highlighted.png */; };
+		C6B3408316CE3580006D6295 /* trackball highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3408116CE3580006D6295 /* trackball highlighted@2x.png */; };
+		C6B3408616CE3EE6006D6295 /* trackball blue highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3408416CE3EE6006D6295 /* trackball blue highlighted.png */; };
+		C6B3408716CE3EE6006D6295 /* trackball blue highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B3408516CE3EE6006D6295 /* trackball blue highlighted@2x.png */; };
+		C6EC657916CEBB4A00222BB1 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EC657816CEBB4A00222BB1 /* AppIcon.png */; };
+		C6EC657B16CEBB4D00222BB1 /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EC657A16CEBB4D00222BB1 /* AppIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,24 +48,32 @@
 		C6B3403B16CD0315006D6295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C6B3403D16CD0315006D6295 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6B3403F16CD0315006D6295 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C6B3404316CD0315006D6295 /* UDTrackball-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UDTrackball-Info.plist"; sourceTree = "<group>"; };
+		C6B3404316CD0315006D6295 /* UDTrackball-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UDTrackball-Info.plist"; path = "../Example/UDTrackball-Info.plist"; sourceTree = "<group>"; };
 		C6B3404516CD0315006D6295 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C6B3404716CD0315006D6295 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C6B3404916CD0315006D6295 /* UDTrackball-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDTrackball-Prefix.pch"; sourceTree = "<group>"; };
-		C6B3404A16CD0315006D6295 /* UDTrackballAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDTrackballAppDelegate.h; sourceTree = "<group>"; };
-		C6B3404B16CD0315006D6295 /* UDTrackballAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDTrackballAppDelegate.m; sourceTree = "<group>"; };
-		C6B3404D16CD0316006D6295 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		C6B3404F16CD0316006D6295 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		C6B3405116CD0316006D6295 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C6B3404716CD0315006D6295 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Example/main.m; sourceTree = "<group>"; };
+		C6B3404916CD0315006D6295 /* UDTrackball-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UDTrackball-Prefix.pch"; path = "../Example/UDTrackball-Prefix.pch"; sourceTree = "<group>"; };
+		C6B3404A16CD0315006D6295 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Example/AppDelegate.h; sourceTree = "<group>"; };
+		C6B3404B16CD0315006D6295 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Example/AppDelegate.m; sourceTree = "<group>"; };
+		C6B3404D16CD0316006D6295 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Example/Default.png; sourceTree = "<group>"; };
+		C6B3404F16CD0316006D6295 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Example/Default@2x.png"; sourceTree = "<group>"; };
+		C6B3405116CD0316006D6295 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Example/Default-568h@2x.png"; sourceTree = "<group>"; };
 		C6B3405416CD0316006D6295 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C6B3405616CD0316006D6295 /* UDTrackballViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDTrackballViewController.h; sourceTree = "<group>"; };
-		C6B3405716CD0316006D6295 /* UDTrackballViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDTrackballViewController.m; sourceTree = "<group>"; };
+		C6B3405616CD0316006D6295 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../Example/ViewController.h; sourceTree = "<group>"; };
+		C6B3405716CD0316006D6295 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../Example/ViewController.m; sourceTree = "<group>"; };
 		C6B3405E16CD0316006D6295 /* UDTrackballTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDTrackballTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B3405F16CD0316006D6295 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		C6B3406716CD0316006D6295 /* UDTrackballTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UDTrackballTests-Info.plist"; sourceTree = "<group>"; };
-		C6B3406916CD0316006D6295 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C6B3406B16CD0316006D6295 /* UDTrackballTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDTrackballTests.h; sourceTree = "<group>"; };
-		C6B3406C16CD0316006D6295 /* UDTrackballTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDTrackballTests.m; sourceTree = "<group>"; };
+		C6B3407616CD63CF006D6295 /* UDInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UDInputAccessoryView.h; path = ../Example/UDInputAccessoryView.h; sourceTree = "<group>"; };
+		C6B3407716CD63CF006D6295 /* UDInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDInputAccessoryView.m; path = ../Example/UDInputAccessoryView.m; sourceTree = "<group>"; };
+		C6B3407916CD7FE0006D6295 /* trackball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trackball.png; path = UDTrackball/Images/trackball.png; sourceTree = SOURCE_ROOT; };
+		C6B3407A16CD7FE0006D6295 /* trackball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackball@2x.png"; path = "UDTrackball/Images/trackball@2x.png"; sourceTree = SOURCE_ROOT; };
+		C6B3407D16CD8133006D6295 /* UDBarTrackballItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDBarTrackballItem.h; sourceTree = "<group>"; };
+		C6B3407E16CD8133006D6295 /* UDBarTrackballItem.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = UDBarTrackballItem.m; sourceTree = "<group>"; tabWidth = 4; };
+		C6B3408016CE3580006D6295 /* trackball highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackball highlighted.png"; path = "UDTrackball/Images/trackball highlighted.png"; sourceTree = SOURCE_ROOT; };
+		C6B3408116CE3580006D6295 /* trackball highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackball highlighted@2x.png"; path = "UDTrackball/Images/trackball highlighted@2x.png"; sourceTree = SOURCE_ROOT; };
+		C6B3408416CE3EE6006D6295 /* trackball blue highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackball blue highlighted.png"; path = "UDTrackball/Images/trackball blue highlighted.png"; sourceTree = SOURCE_ROOT; };
+		C6B3408516CE3EE6006D6295 /* trackball blue highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trackball blue highlighted@2x.png"; path = "UDTrackball/Images/trackball blue highlighted@2x.png"; sourceTree = SOURCE_ROOT; };
+		C6EC657816CEBB4A00222BB1 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		C6EC657A16CEBB4D00222BB1 /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +103,10 @@
 		C6B3402F16CD0315006D6295 = {
 			isa = PBXGroup;
 			children = (
+				C6EC657A16CEBB4D00222BB1 /* AppIcon@2x.png */,
+				C6EC657816CEBB4A00222BB1 /* AppIcon.png */,
+				C6EC657716CEB64400222BB1 /* Example */,
 				C6B3404116CD0315006D6295 /* UDTrackball */,
-				C6B3406516CD0316006D6295 /* UDTrackballTests */,
 				C6B3403A16CD0315006D6295 /* Frameworks */,
 				C6B3403916CD0315006D6295 /* Products */,
 			);
@@ -117,12 +135,9 @@
 		C6B3404116CD0315006D6295 /* UDTrackball */ = {
 			isa = PBXGroup;
 			children = (
-				C6B3404A16CD0315006D6295 /* UDTrackballAppDelegate.h */,
-				C6B3404B16CD0315006D6295 /* UDTrackballAppDelegate.m */,
-				C6B3405316CD0316006D6295 /* MainStoryboard.storyboard */,
-				C6B3405616CD0316006D6295 /* UDTrackballViewController.h */,
-				C6B3405716CD0316006D6295 /* UDTrackballViewController.m */,
-				C6B3404216CD0315006D6295 /* Supporting Files */,
+				C6B3407D16CD8133006D6295 /* UDBarTrackballItem.h */,
+				C6B3407E16CD8133006D6295 /* UDBarTrackballItem.m */,
+				C6EC657C16CEBB7D00222BB1 /* Images */,
 			);
 			path = UDTrackball;
 			sourceTree = "<group>";
@@ -141,23 +156,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C6B3406516CD0316006D6295 /* UDTrackballTests */ = {
+		C6EC657716CEB64400222BB1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				C6B3406B16CD0316006D6295 /* UDTrackballTests.h */,
-				C6B3406C16CD0316006D6295 /* UDTrackballTests.m */,
-				C6B3406616CD0316006D6295 /* Supporting Files */,
+				C6B3404A16CD0315006D6295 /* AppDelegate.h */,
+				C6B3404B16CD0315006D6295 /* AppDelegate.m */,
+				C6B3405316CD0316006D6295 /* MainStoryboard.storyboard */,
+				C6B3405616CD0316006D6295 /* ViewController.h */,
+				C6B3405716CD0316006D6295 /* ViewController.m */,
+				C6B3407616CD63CF006D6295 /* UDInputAccessoryView.h */,
+				C6B3407716CD63CF006D6295 /* UDInputAccessoryView.m */,
+				C6B3404216CD0315006D6295 /* Supporting Files */,
 			);
-			path = UDTrackballTests;
+			name = Example;
+			path = UDTrackball;
 			sourceTree = "<group>";
 		};
-		C6B3406616CD0316006D6295 /* Supporting Files */ = {
+		C6EC657C16CEBB7D00222BB1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C6B3406716CD0316006D6295 /* UDTrackballTests-Info.plist */,
-				C6B3406816CD0316006D6295 /* InfoPlist.strings */,
+				C6B3407916CD7FE0006D6295 /* trackball.png */,
+				C6B3407A16CD7FE0006D6295 /* trackball@2x.png */,
+				C6B3408016CE3580006D6295 /* trackball highlighted.png */,
+				C6B3408116CE3580006D6295 /* trackball highlighted@2x.png */,
+				C6B3408416CE3EE6006D6295 /* trackball blue highlighted.png */,
+				C6B3408516CE3EE6006D6295 /* trackball blue highlighted@2x.png */,
 			);
-			name = "Supporting Files";
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +262,14 @@
 				C6B3405016CD0316006D6295 /* Default@2x.png in Resources */,
 				C6B3405216CD0316006D6295 /* Default-568h@2x.png in Resources */,
 				C6B3405516CD0316006D6295 /* MainStoryboard.storyboard in Resources */,
+				C6B3407B16CD7FE0006D6295 /* trackball.png in Resources */,
+				C6B3407C16CD7FE0006D6295 /* trackball@2x.png in Resources */,
+				C6B3408216CE3580006D6295 /* trackball highlighted.png in Resources */,
+				C6B3408316CE3580006D6295 /* trackball highlighted@2x.png in Resources */,
+				C6B3408616CE3EE6006D6295 /* trackball blue highlighted.png in Resources */,
+				C6B3408716CE3EE6006D6295 /* trackball blue highlighted@2x.png in Resources */,
+				C6EC657916CEBB4A00222BB1 /* AppIcon.png in Resources */,
+				C6EC657B16CEBB4D00222BB1 /* AppIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B3406A16CD0316006D6295 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B3404816CD0315006D6295 /* main.m in Sources */,
-				C6B3404C16CD0315006D6295 /* UDTrackballAppDelegate.m in Sources */,
-				C6B3405816CD0316006D6295 /* UDTrackballViewController.m in Sources */,
+				C6B3404C16CD0315006D6295 /* AppDelegate.m in Sources */,
+				C6B3405816CD0316006D6295 /* ViewController.m in Sources */,
+				C6B3407816CD63CF006D6295 /* UDInputAccessoryView.m in Sources */,
+				C6B3407F16CD8133006D6295 /* UDBarTrackballItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B3406D16CD0316006D6295 /* UDTrackballTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +335,7 @@
 				C6B3404516CD0315006D6295 /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ../Example;
 			sourceTree = "<group>";
 		};
 		C6B3405316CD0316006D6295 /* MainStoryboard.storyboard */ = {
@@ -310,14 +344,7 @@
 				C6B3405416CD0316006D6295 /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		C6B3406816CD0316006D6295 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6B3406916CD0316006D6295 /* en */,
-			);
-			name = InfoPlist.strings;
+			path = ../Example;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -348,7 +375,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -372,7 +399,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -383,8 +410,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UDTrackball/UDTrackball-Prefix.pch";
-				INFOPLIST_FILE = "UDTrackball/UDTrackball-Info.plist";
+				GCC_PREFIX_HEADER = "Example/UDTrackball-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/UDTrackball-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,8 +422,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UDTrackball/UDTrackball-Prefix.pch";
-				INFOPLIST_FILE = "UDTrackball/UDTrackball-Info.plist";
+				GCC_PREFIX_HEADER = "Example/UDTrackball-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/UDTrackball-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,6 +483,7 @@
 				C6B3407216CD0316006D6295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6B3407316CD0316006D6295 /* Build configuration list for PBXNativeTarget "UDTrackballTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +492,7 @@
 				C6B3407516CD0316006D6295 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
