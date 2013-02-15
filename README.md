@@ -9,6 +9,8 @@ The intention was to create a text navigation component for text editor apps tha
 
 It is implemented as a `UIBarButtonItem` subclass to control the caret movement and text selection of a `UITextView` and intended to be use inside a `InputAccessoryView` (`UIToolbar`).
 
+[Screencast of the sample project example](https://www.youtube.com/watch?v=7WquTtzEsRs)
+
 ![Screenshot of the sample project example](Screenshot.png)
 
 ## Features
@@ -48,4 +50,4 @@ This code is distributed under the terms and conditions of the MIT license. Revi
 
 ## Support/Contact
 
-Think you found a bug or just have a feature request? Just [post it as an issue](https://github.com/djui/UDTrackball/issues), but make sure to review the existing issues first to avoid duplicates. You can also hit me up at [@uwe_](http://twitter.com/uwe_) for anything else, or to let me know how you're using this component. Thanks!
+Think you found a bug or just have a feature request? Just [post it as an issue](https://github.com/djui/UDBarTrackballItem/issues), but make sure to review the existing issues first to avoid duplicates. You can also hit me up at [@uwe_](http://twitter.com/uwe_) for anything else, or to let me know how you're using this component. Thanks!
