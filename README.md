@@ -1,111 +1,46 @@
-UDTrackballItem
-===================
+UDBarTrackballItem
+==================
 
 ## Overview
 
-`URBSegmentedControl` is a more flexible alternative to the default `UISegmentedControl` available in UIKit that offers easier customization and more options for layout orientations with titles and images. However, much of the same functionality and API methods that are available in `UISegmentedControl` are also available in `URBSegmentedControl`, making it an easier drop-in replacement within your own projects.
+`UDBarTrackballItem` is a button view for iOS which can position the text cursor (caret) and define the text selection of a text view in parallel to its touch drag movement. The user interaction pattern is similar to a [Thinkpad TrackPoint](http://en.wikipedia.org/wiki/Pointing_stick).
 
-![Screenshot of the sample project example](http://dl.dropbox.com/u/197980/Screenshots/URBSegmentedControl_screenshot01.png)
+The intention was to create a text navigation component for text editor apps that makes the task of frequent text positioning and selection more convenient. The default way of positioning and selection requires a touch down delay to distinguish view scrolling and editing mode as well as the magnifying glass which distract the precise positioning more that it helps. The tradeoff is a decrease in view real-estate for the input accessory view bar (which is quite common in text editors nowadays).
+
+It is implemented as a `UIBarButtonItem` subclass to control the caret movement and text selection of a `UITextView` and intended to be use inside a `InputAccessoryView` (`UIToolbar`).
+
+![Screenshot of the sample project example](Screenshot.png)
 
 ## Features
 
-- Segments can be just icons or titles, or titles with icons
-- Supports customizable colors and fonts
-- Supports using UIAppearance for setting the global styles on all instances
-- Supports blocks for value changes
-- Automatically tints images based on normal and selected image colors (no need for two separate versions of your icons)
-- Horizontal and vertial layout orientations for the overall control and for each individual segment
+- Single tap dragging cursor (caret) positioning
+- Double tap dragging text selection
+- Auto scrolling of text view when positioning out of bound
+- Auto popup editing menu after positioning or selection
+- Horizontal side-to-side reach distance without re-tap
+- Horizontal and vertial layout orientations
 - Uses ARC and targets iOS 5.0+
 
 ## Installation
 
-To use `URBSegmentedControl` in your own project:
-- import `URBSegmentedControl.h` and `URBSegmentedControl.m` files into your project, and then include "`URBSegmentedControl.h`" where needed, or in your precompiled header
-- link against the `QuartzCore` framework by adding `QuartzCore.framework` to your project under `Build Phases` > `Link Binary With Libraries`.
+To use `UDBarTrackballItem` in your own project:
 
-Once installed, you can then use `URBSegmentedControl` just as you would with UIKit's `UISegmentedControl`.
+- Import `UDBarTrackballItem.h` and `UDBarTrackballItem.m` and all png image files into your project
+- Include `UDBarTrackballItem.h` (`#import "UDBarTrackballItem.h"`) where needed, or in your precompiled header
+- Initialize the new `UDBarTrackballItem` for a `UITextView`
 
 This project uses ARC and targets iOS 5.0+.
 
 ## Usage
 
-(see more detailed usage examples in the included project under /SampleProject)
-
-The following is the most basic example of creating an URBSegmentedControl instance that mimics the same for UISegmentedControl:
-
 ```objective-c
-NSArray *titles = [NSArray arrayWithObjects:[@"Item 1" uppercaseString], [@"Item 2" uppercaseString], [@"Item 3" uppercaseString], nil];
-URBSegmentedControl *control = [[URBSegmentedControl alloc] initWithItems:titles];
-[control addTarget:self action:@selector(handleSelection:) forControlEvents:UIControlEventValueChanged];
-[viewController.view addSubview:control];
+UDBarTrackballItem *trackballItem = [[UDBarTrackballItem alloc] initForTextView:_textView];
+[_toolbar setItems:@[trackballItem] animated:YES];
 ```
-
-Instead of adding a target to the control to respond to value changes, you can set a handler block on each instance:
-
-```objective-c
-NSArray *titles = [NSArray arrayWithObjects:[@"Item 1" uppercaseString], [@"Item 2" uppercaseString], [@"Item 3" uppercaseString], nil];
-URBSegmentedControl *control = [[URBSegmentedControl alloc] initWithItems:titles];
-[control setControlEventBlock:^(NSInteger index, URBSegmentedControl *segmentedControl) {
-	NSLog(@"control value changed - index=%i", index);
-}];
-[viewController.view addSubview:control];
-```
-
-If you just want a control with icons only, you would initialize the instance with `initWithIcons:`:
-
-```objective-c
-NSArray *icons = [NSArray arrayWithObjects:[UIImage imageNamed:@"mountains.png"], [UIImage imageNamed:@"snowboarder.png"], [UIImage imageNamed:@"biker.png"], nil];
-URBSegmentedControl *control = [[URBSegmentedControl alloc] initWithIcons:icons];
-[viewController.view addSubview:control];
-```
-
-Alternative, you can initialize an instance with both titles and images (as long as both arrays provided for each are equal in length):
-
-```objective-c
-NSArray *titles = [NSArray arrayWithObjects:[@"Item 1" uppercaseString], [@"Item 2" uppercaseString], [@"Item 3" uppercaseString], nil];
-NSArray *icons = [NSArray arrayWithObjects:[UIImage imageNamed:@"mountains.png"], [UIImage imageNamed:@"snowboarder.png"], [UIImage imageNamed:@"biker.png"], nil];
-URBSegmentedControl *control = [[URBSegmentedControl alloc] initWithTitles:titles icons:icons];
-[viewController.view addSubview:control];
-```
-
-## Customization
-
-Your `URBSegmentedControl` can be customized using the following properties:
-
-```objective-c
-// base styles
-@property (nonatomic, strong) UIColor *baseColor;		// default [UIColor colorWithRed:0.35 green:0.35 blue:0.35 alpha:1.0];
-@property (nonatomic, strong) UIColor *strokeColor;		// default [UIColor darkGrayColor]
-@property (nonatomic, assign) CGFloat strokeWidth;		// default 2.0
-@property (nonatomic) CGFloat cornerRadius;				// default 2.0
-
-// segment styles
-@property (nonatomic, strong) UIColor *segmentBackgroundColor;		// default [UIColor redColor]
-@property (nonatomic, strong) UIColor *imageColor;					// default [UIColor grayColor]
-@property (nonatomic, strong) UIColor *selectedImageColor;			// default [UIColor whiteColor]
-```
-
-By default, your images will be tinted with the colors you define using the `imageColor` and `selectedImageColor` properties. If you would rather keep your images in their original format, just set these color properties to `nil`:
-
-```objective-c
-control.imageColor = nil;
-control.selectedImageColor = nil;
-```
-
-## TODO
-
-- Support setting images to use for background and segment states instead of drawing in CoreGraphics within the class
-- Support for UISegmentedControl's `momentary` mode
-- Better support for customization using UIAppearance
-- Support installation via CocoaPods
 
 ## Credits
 
-The sample URBSegmentedControlDemo project uses the following icons from their respective authors (all from [The Noun Project](http://thenounproject.com) ):
-
-- [Snowboarder](http://thenounproject.com/noun/bike-hop/#icon-No2042) designed by [Vlad Likh](http://thenounproject.com/likh.v) from The Noun Project (under public domain)
-- [Mountains](http://thenounproject.com/noun/mountains/#icon-No2469) designed by [Chris Cole](http://thenounproject.com/hellochriscole) from The Noun Project
-- [Bike Hop](http://thenounproject.com/noun/bike-hop/#icon-No1889) designed by [Alfonso Melolonta Urbán](http://thenounproject.com/melolonta) from The Noun Project
+[Write](http://writeapp.net/) app for the innovative inspiration for and first-time appearance of this component.
 
 ## License
 
@@ -113,4 +48,4 @@ This code is distributed under the terms and conditions of the MIT license. Revi
 
 ## Support/Contact
 
-Think you found a bug or just have a feature request? Just [post it as an issue](https://github.com/u10int/URBSegmentedControl/issues), but make sure to review the existing issues first to avoid duplicates. You can also hit me up at [@u10int](http://twitter.com/u10int) for anything else, or to let me know how you're using this component. Thanks!
+Think you found a bug or just have a feature request? Just [post it as an issue](https://github.com/djui/UDTrackball/issues), but make sure to review the existing issues first to avoid duplicates. You can also hit me up at [@uwe_](http://twitter.com/uwe_) for anything else, or to let me know how you're using this component. Thanks!
